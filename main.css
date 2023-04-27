@@ -1,0 +1,305 @@
+:root {
+  --background: linear-gradient(145deg, #8c52ff, #5ce1e6);
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: var(--background);
+}
+
+nav>.nav_icon {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+nav i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+
+
+
+
+.fader > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: .5s;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+.fader > *.active {
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+}
+
+
+
+.flex2_container {
+  display: flex;
+}
+
+.flex2_container>.flex1 {
+  flex-basis: 55%;
+  /* background-color: #5ce1e6; */
+}
+
+.flex2_container>.flex2 {
+  flex-basis: 45%;
+  /* background-color: #8c52ff; */
+}
+
+
+
+
+
+.interface {
+  position: relative;
+}
+
+
+
+
+.hook {
+  position: absolute;
+  height: 290px;
+  width: 175px;
+  background: var(--background);
+  transform: skewY(-15deg);
+  left: 20px;
+  top: 70px;
+  z-index: -1;
+}
+
+.hook::before {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 175px;
+  background: var(--background);
+  left: 70px;
+  top: 90px;
+  z-index: -1;
+}
+
+.hook::after {
+  content: "";
+  position: absolute;
+  height: 270px;
+  width: 175px;
+  background: var(--background);
+  left: 150px;
+  top: 150px;
+  z-index: -1;
+}
+
+
+.interface .interface_info {
+  padding: 50px 100px;
+}
+
+
+.interface .interface_carousel {
+  padding: 50px 20px;
+}
+
+
+.intro h1 {
+  font-size: 4vw;
+}
+
+.intro p {
+  padding: 10px 0px;
+  font-size: 2vw;
+}
+
+.developer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.developer .card {
+  display: flex;
+  padding: 5px;
+  /* background-color: aqua; */
+  border-radius: 5px;
+}
+
+.developer .carousel {
+  position: relative;
+  height: 170px;
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.developer .carousel>.image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.developer .carousel>.image>img {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.developer .info {
+  padding: 10px 15px;
+}
+
+
+.typing {
+  height: 20px;
+  overflow: hidden;
+  font-size: .9rem;
+  position: relative;
+}
+.typing > div {
+  display: flex;
+  align-items: center;
+}
+
+
+.developer .info ul {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.developer .info ul li a {
+  padding: 5px;
+}
+
+
+.buttons {
+  margin-top: 20px;
+}
+
+
+@media(max-width: 1380px) {
+  .flex2_container>.flex1 {
+    padding: 20px 15px;
+  }
+
+  .flex2_container>.flex2 {
+    padding: 20px 15px;
+  }
+}
+
+@media(max-width: 1180px) {
+
+  .developer .card {
+    font-size: .7rem;
+    flex-grow: 1;
+  }
+
+  .developer .card .info {
+    padding: 0px 10px;
+  }
+
+
+  .developer .carousel {
+    height: calc(170px - 70px);
+    width: calc(200px - 70px);
+  }
+}
+
+@media(max-width: 768px) {
+  .flex2_container {
+    display: block;
+  }
+
+  .flex2_container>.flex1 {
+    padding: 20px 15px;
+  }
+
+  .flex2_container>.flex2 {
+    padding: 20px 15px;
+  }
+
+
+  .developer .card {
+    padding: 5px;
+    /* background-color: #5ce1e6; */
+  }
+
+
+  .developer .card ul li a {
+    font-size: .9rem;
+    padding: 0px 5px;
+  }
+
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media(max-width: 500px) {
+  .hook {
+    left: 5px;
+    top: -20px;
+    transform: scale(.4) skewY(-27deg);
+  }
+  .interface_info .intro h1 {
+    font-size: 2.5rem;
+  }
+  .intro p {
+    font-size: 1.2rem;
+  }
+  .interface .interface_carousel {
+    display: none;
+  }
+  .card {
+    position: relative;
+    
+  }
+  .card:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: var(--background);
+    z-index: -1;
+    transform: skewY(5deg);
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: var(--background);
+    z-index: -1;
+    transform: skewY(-5deg);
+  }
+  
+  .card .carousel {
+    width: 100px;
+    height: 100%;
+  }
+}
