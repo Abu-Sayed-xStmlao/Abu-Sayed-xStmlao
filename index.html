@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Female</title>
+  
+  <meta name="title" content="Female" />
+  <meta name="description" content="Design and Create a Modern and beautiful friendly responsive Website and Web Application for your Business." />
+  <meta name="image" content="/kaifunnesa-hema.png" />
+  
+  <meta name="og:title" content="Female" />
+  <meta name="og:description" content="Design and Create a Modern and beautiful friendly responsive Website and Web Application for your Business." />
+  <meta name="og:image" content="/kaifunnesa-hema.png" />
+
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+:root {
+    --face-color: #dca;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .female {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+  }
+  .body {
+    position: absolute;
+    height: 120px;
+    width: 150px;
+    background: #97f;
+    bottom: 0;
+    border-radius: 200px 200px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  .body:before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 60%;
+    background: #eef;
+    bottom: 0px;
+    border-radius: 20px 20px 0 0;
+  }
+  .gola {
+    position: absolute;
+    height: 50px;
+    width: 35px;
+    background: var(--face-color);
+    border-radius: 0 0 50px 50px;
+    bottom: 100px;
+    z-index: 1;
+  }
+  .face {
+    position: absolute;
+    height: 85px;
+    width: 80px;
+    background: var(--face-color);
+    border-radius: 50px;
+    bottom: 130px;
+  }
+  .hair {
+    position: absolute;
+    height: 62%;
+    width: 40%;
+    background: #000;
+    bottom: 0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .hair:before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 50px;
+    background: #000;
+    top: 10%;
+    z-index: 2;
+  }
+  .face {
+    display: flex;
+    justify-content: center;
+  }
+  .face .eyes {
+    position: absolute;
+    background:;
+    display: flex;
+    top: 20px;
+    width: 75%;
+    justify-content: space-around;
+  }
+  .eyes .eye {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .eye:before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    background: #000;
+    border-radius: 50%;
+    right: 1px;
+    top: 5px;
+  }
+
+  .eye:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 30%;
+    top: -4px;
+    border-top: 2px solid #000;
+  }
+  .face .mouth {
+    position: absolute;
+    width: 20px;
+    background: #f39;
+    bottom: 20px;
+    transition: .3s;
+    height: 5px;
+    border-radius: 2px;
+  }
+
+  .female.active .mouth,
+  .female:hover .mouth {
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  .female.active .eye,
+  .female:hover .eye {
+    transform: rotate(-9deg);
+  }
+
+  .face:hover .eye:before {
+    transition: .4s;
+    top: 7px;
+  }
+@keyframes jgg7k {
+    0%, 65% {
+      height: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    100% {
+      height: 5px;
+      border-radius: 2px;
+    }
+  }
+  .watermark {
+    position: absolute;
+    top: 50%;
+    font-style: italic;
+    font-family: Courier New;
+  }
+</style>
+
+
+<body>
+
+  <div class="female">
+    <div class="hair"></div>
+    <div class="face">
+      <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+    <div class="gola"></div>
+    <div class="body">
+      <div class="watermark">
+        xStmlao
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    const female = document.querySelector(".female");
+    setInterval(function() {
+      female.classList.toggle("active");
+    }, 1500);
+  </script>
+</body>
+</html>
